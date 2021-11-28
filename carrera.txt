@@ -1,0 +1,121 @@
+package Ejercicio7;
+
+import java.sql.Struct;
+import java.util.Arrays;
+import java.util.Random;
+
+public class Carrera implements Runnable {
+    static int Comp = 0 ;
+    Random r = new Random();
+
+    @Override
+    public void run() {
+        liebrecarrera();
+        tortugacarrera();
+        fotofinish();
+
+    }
+
+    private synchronized void liebrecarrera() {
+
+        if (Thread.currentThread().getName().equals("Liebre")) {
+            for (int i = 0; i <= 70; ) {
+                int a = r.nextInt((11) - 1);
+                switch (a) {
+                    case 0:
+                    case 1:
+                        i += 0;
+                        break;
+
+                    case 2:
+                    case 3:
+                    case 4:
+                        i += 1;
+                        break;
+
+                    case 5:
+                    case 6:
+                        i += 9;
+                        break;
+
+                    case 7:
+                    case 8:
+                        i -= 2;
+                        break;
+
+                    case 9:
+                        i -= 12;
+                        break;
+                }
+                if (i <= 0) i = 0;
+
+                System.out.println(a + " Aleatorio");
+                System.out.println(i);
+                System.out.println("**************LIEBRE******************");
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+
+                }
+            }Comp = 1 + Comp;
+            System.out.println("La liebre ha terminado");
+
+
+        }
+        notifyAll();
+    }
+    private synchronized void tortugacarrera() {
+
+        if (Thread.currentThread().getName().equals("Tortuga")) {
+            for (int i = 0; i <= 70; ) {
+                int a = r.nextInt((11) - 1);
+                switch (a) {
+                    case 0:
+                    case 1:
+                    case 2:
+                        i += 1;
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                    case 7:
+                        i += 3;
+                        break;
+                    case 8:
+                    case 9:
+                        i -= 6;
+                        break;
+                }
+                if (i <= 0) i = 0;
+
+                System.out.println(a + " Aleatorio");
+                System.out.println(i);
+                System.out.println("**************TORTUGA******************");
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+
+                }
+            }
+            Comp =1 + Comp;
+            System.out.println("La tortuga ha terminado ***************---------------/*__*/-----------------------*******************");
+
+
+        }
+        notifyAll();
+
+    }
+    private  void  fotofinish(){
+        if(Comp==1){
+            System.out.println(Thread.currentThread().getName() + " ha ganado " + Comp);
+        }else if (Comp==2){
+            System.out.println(Thread.currentThread().getName() + " ha perdido " + Comp);
+        }else{
+            System.out.println("Ha sido empate!!!!" + Comp);
+        }
+    }
+
+}

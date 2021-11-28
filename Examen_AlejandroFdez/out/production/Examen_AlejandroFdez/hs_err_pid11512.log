@@ -1,0 +1,139 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 4096 bytes for card table last card
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3377), pid=11512, tid=0x0000000000003304
+#
+# JRE version:  (8.0_301-b09) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.301-b09 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000020ba03d0000):  JavaThread "Unknown thread" [_thread_in_vm, id=13060, stack(0x0000007534000000,0x0000007534100000)]
+
+Stack: [0x0000007534000000,0x0000007534100000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32ed79]
+V  [jvm.dll+0x275722]
+V  [jvm.dll+0x2763cd]
+V  [jvm.dll+0x26ce05]
+V  [jvm.dll+0x2936fe]
+V  [jvm.dll+0x214f95]
+V  [jvm.dll+0xdb20c]
+V  [jvm.dll+0x3c5c86]
+V  [jvm.dll+0xfafce]
+V  [jvm.dll+0xfc3f4]
+V  [jvm.dll+0x20a057]
+V  [jvm.dll+0x238ae7]
+V  [jvm.dll+0x162876]
+C  [java.exe+0x2312]
+C  [java.exe+0x15f54]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000020ba03d0000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=13060, stack(0x0000007534000000,0x0000007534100000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c1a00000, size: 4070 MB, Compressed Oops mode: Non-zero based:0x00000006c19ff000, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6188b0000 - 0x00007ff6188f7000 	C:\Program Files\Java\jdk1.8.0_301\bin\java.exe
+0x00007ffc71eb0000 - 0x00007ffc720a5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc710e0000 - 0x00007ffc7119d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc6f900000 - 0x00007ffc6fbc9000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc71b10000 - 0x00007ffc71bbc000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc70fc0000 - 0x00007ffc7105e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc711a0000 - 0x00007ffc7123b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc70e90000 - 0x00007ffc70fba000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc6ff70000 - 0x00007ffc70110000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc6fd90000 - 0x00007ffc6fdb2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc718e0000 - 0x00007ffc7190a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc6f5e0000 - 0x00007ffc6f6eb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc6fe70000 - 0x00007ffc6ff0d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc6fbd0000 - 0x00007ffc6fcd0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc658a0000 - 0x00007ffc65b3a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffc712c0000 - 0x00007ffc712f0000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc6b190000 - 0x00007ffc6b1a5000 	C:\Program Files\Java\jdk1.8.0_301\jre\bin\vcruntime140.dll
+0x00007ffc67890000 - 0x00007ffc6792b000 	C:\Program Files\Java\jdk1.8.0_301\jre\bin\msvcp140.dll
+0x0000000061170000 - 0x00000000619d0000 	C:\Program Files\Java\jdk1.8.0_301\jre\bin\server\jvm.dll
+0x00007ffc70850000 - 0x00007ffc70858000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc56620000 - 0x00007ffc56629000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc71e00000 - 0x00007ffc71e6b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc668d0000 - 0x00007ffc668f7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc67600000 - 0x00007ffc6760a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc6d430000 - 0x00007ffc6d442000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc6b2a0000 - 0x00007ffc6b2b0000 	C:\Program Files\Java\jdk1.8.0_301\jre\bin\verify.dll
+0x00007ffc69050000 - 0x00007ffc6907b000 	C:\Program Files\Java\jdk1.8.0_301\jre\bin\java.dll
+0x00007ffc67870000 - 0x00007ffc67888000 	C:\Program Files\Java\jdk1.8.0_301\jre\bin\zip.dll
+0x00007ffc5aa80000 - 0x00007ffc5ac64000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffc6fcd0000 - 0x00007ffc6fd53000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+java_command: LanzaSumas 2141 3
+java_class_path (initial): .
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_301
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Java\jdk1.8.0_301\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\apache-maven-3.8.2\bin;C:\Users\CES\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\CES\AppData\Local\Programs\Python\Python39\;C:\Users\CES\AppData\Local\Microsoft\WindowsApps;;C:\Users\CES\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.1\bin;;C:\Users\CES\AppData\Roaming\npm
+USERNAME=CES
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1151)
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 16663416k(9121952k free), swap 66995064k(208576k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.301-b09) for windows-amd64 JRE (1.8.0_301-b09), built on Jun  9 2021 06:46:21 by "java_re" with MS VC++ 15.9 (VS2017)
+
+time: Thu Oct 14 08:59:55 2021
+timezone: Hora de verano romance
+elapsed time: 0.185714 seconds (0d 0h 0m 0s)
+
