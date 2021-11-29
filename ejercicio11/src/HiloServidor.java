@@ -49,7 +49,7 @@ public class HiloServidor extends Thread{
                 File salida = new File("datos.txt");
                 FileWriter writer = new FileWriter(salida);
                 for (String t:Servidor.txt) {
-                    writer.write(t);
+                    writer.write();
                     writer.flush();
                 }
                 writer.close();

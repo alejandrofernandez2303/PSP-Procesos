@@ -9,13 +9,14 @@ public class Cliente
 {
     public static void main(String[] args)
     {
-        Persona Juan = new Persona("Juan", 2200);
-        Persona Beatriz = new Persona("Beatriz", 1132);
+
+        /*Persona Beatriz = new Persona("Beatriz", 1132);
         Persona David = new Persona("David", 643);
-        Persona Ana = new Persona("Ana", 349);
+        Persona Ana = new Persona("Ana", 349);*/
 
         String host = "localhost";
         int puerto = 80;
+        Persona juan = new Persona("Juan", 2200);
 
         InetSocketAddress address = new InetSocketAddress(host, puerto);
         Socket socket = new Socket();
@@ -24,11 +25,10 @@ public class Cliente
         {
             socket.connect(address);
             ObjectOutputStream oS = new ObjectOutputStream(socket.getOutputStream());
-            oS.writeObject(Juan);
-            oS.writeObject(Beatriz);
+            oS.writeObject(juan);
+            /*oS.writeObject(Beatriz);
             oS.writeObject(David);
-            oS.writeObject(Ana);
-            oS.close();
+            oS.writeObject(Ana);*/
         }
         catch (IOException e)
         {

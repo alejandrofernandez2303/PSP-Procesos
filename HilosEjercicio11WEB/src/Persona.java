@@ -1,4 +1,6 @@
-public class Persona
+import java.io.Serializable;
+
+public class Persona implements Serializable
 {
     String nombre;
     int puntuacion;
@@ -9,7 +11,7 @@ public class Persona
         this.puntuacion = puntuacion;
     }
 
-    public String getNombre()
+    /*public String getNombre()
     {
         return nombre;
     }
@@ -17,5 +19,5 @@ public class Persona
     public int getPuntuacion()
     {
         return puntuacion;
-    }
+    }*/
 }
