@@ -9,6 +9,7 @@ public class Main
     //los numeros con los que vamos a empezar el ejercicio son el 3 y el 7
     public static void main(String[] args)
     {
+        System.out.println(args[0] + ", " + args[1]);
         int num1 = Integer.parseInt(args[0]);
         int num2 = Integer.parseInt(args[1]);
 
